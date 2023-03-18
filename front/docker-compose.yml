@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  reactjs-frontend:
+    build: .
+    command: npm start
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/usr/app
