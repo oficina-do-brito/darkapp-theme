@@ -1,3 +1,10 @@
+import { Header } from "../../components/Header";
+
 export const Home: React.FC = () => {
-  return <>Ola mundo react</>;
+  return (
+    <>
+      <Header />
+      Ola mundo react
+    </>
+  );
 };

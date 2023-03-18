@@ -4,6 +4,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { GlobalStyle } from "./css/globalstyle";
+import { ThemeProvider } from "styled-components";
+import light from "./css/themes/light";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,15 +15,13 @@ root.render(
     {
       <BrowserRouter>
         <GlobalStyle />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <ThemeProvider theme={light}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </ThemeProvider>
       </BrowserRouter>
     }
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
