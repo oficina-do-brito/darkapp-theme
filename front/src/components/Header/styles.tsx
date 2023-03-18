@@ -7,6 +7,7 @@ export const HeaderStyle = styled.div`
     background: ${props.theme.colors.primary};
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 30px;
 
     @media only screen and (max-width: 320px) {
